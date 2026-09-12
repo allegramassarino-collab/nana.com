@@ -22,6 +22,7 @@
     <nav class="nav-links">
       <a href="index.html">Home</a>
       <a href="collezione.html" class="active">Collezione</a>
+      <a href="quiz.html">Quiz</a>
       <a href="chi-siamo.html">Chi siamo</a>
       <a href="contatti.html">Contatti</a>
     </nav>
@@ -36,6 +37,7 @@
 <div class="mobile-panel">
   <a href="index.html">Home</a>
   <a href="collezione.html">Collezione</a>
+  <a href="quiz.html">Quiz</a>
   <a href="chi-siamo.html">Chi siamo</a>
   <a href="contatti.html">Contatti</a>
 </div>
@@ -57,6 +59,32 @@
     <div class="photo-banner reveal-scale">
       <img src="images/prodotti-stack.jpg" alt="Anelli nanà impilati in argento e smalto colorato">
     </div>
+
+    <div class="stack-builder reveal-scale">
+      <div>
+        <span class="section-tag">Prova a comporlo</span>
+        <h2 style="font-size:1.8rem;margin-bottom:10px">Componi il tuo stack</h2>
+        <p style="color:#726d63;margin-bottom:24px">Clicca sui colori per creare la tua combinazione di anelli, poi mandacela su WhatsApp: te la prepariamo così.</p>
+        <div class="stack-swatches">
+          <button class="stack-swatch swatch-orange" data-color="orange" title="Arancio" aria-label="Aggiungi Arancio"></button>
+          <button class="stack-swatch swatch-red" data-color="red" title="Rosso" aria-label="Aggiungi Rosso"></button>
+          <button class="stack-swatch swatch-pink" data-color="pink" title="Fucsia" aria-label="Aggiungi Fucsia"></button>
+          <button class="stack-swatch swatch-teal" data-color="teal" title="Turchese" aria-label="Aggiungi Turchese"></button>
+          <button class="stack-swatch swatch-green" data-color="green" title="Verde" aria-label="Aggiungi Verde"></button>
+          <button class="stack-swatch swatch-blue" data-color="blue" title="Blu" aria-label="Aggiungi Blu"></button>
+          <button class="stack-swatch swatch-purple" data-color="purple" title="Lilla" aria-label="Aggiungi Lilla"></button>
+        </div>
+        <div class="stack-actions">
+          <button class="stack-btn" id="stack-undo" type="button">Rimuovi ultimo</button>
+          <button class="stack-btn" id="stack-clear" type="button">Svuota</button>
+          <a href="#" target="_blank" class="btn btn-wa magnetic" id="stack-send" style="pointer-events:none;opacity:.5">Invia il mio stack</a>
+        </div>
+      </div>
+      <div class="stack-preview" id="stack-preview">
+        <span class="stack-empty-hint" id="stack-empty-hint">Il tuo stack apparirà qui ✨<br>Clicca un colore per iniziare</span>
+      </div>
+    </div>
+
     <div class="filters reveal in">
       <button class="filter-pill active" data-filter="all">Tutti</button>
       <button class="filter-pill" data-filter="orange">Arancio</button>
@@ -146,6 +174,7 @@
         <h4>Naviga</h4>
         <a href="index.html">Home</a>
         <a href="collezione.html">Collezione</a>
+        <a href="quiz.html">Quiz</a>
         <a href="chi-siamo.html">Chi siamo</a>
         <a href="contatti.html">Contatti</a>
       </div>

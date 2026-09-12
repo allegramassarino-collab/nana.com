@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Che colore sei? — nanà</title>
+<meta name="description" content="Rispondi a 4 domande veloci e scopri quale anello nanà rispecchia il tuo umore di oggi.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="preloader">
+  <div class="preloader-badge">
+    <img src="images/logo-nana.jpg" alt="nanà">
+  </div>
+</div>
+
+<header class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="logo"><img src="images/logo-nana.jpg" alt="nanà"></a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="collezione.html">Collezione</a>
+      <a href="quiz.html" class="active">Quiz</a>
+      <a href="chi-siamo.html">Chi siamo</a>
+      <a href="contatti.html">Contatti</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="contatti.html" class="btn btn-outline magnetic">Contattaci</a>
+      <a href="https://wa.me/393498881684" target="_blank" class="btn btn-primary magnetic">WhatsApp</a>
+    </div>
+    <div class="burger"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<div class="mobile-panel">
+  <a href="index.html">Home</a>
+  <a href="collezione.html">Collezione</a>
+  <a href="quiz.html">Quiz</a>
+  <a href="chi-siamo.html">Chi siamo</a>
+  <a href="contatti.html">Contatti</a>
+</div>
+
+<section class="page-head bg-cream">
+  <div class="hero-visual" style="position:absolute; inset:0; height:auto; z-index:0;">
+    <div class="blob b2" style="opacity:.5"><img class="logo-mark" src="images/logo-nana.jpg" alt="nanà"></div>
+    <div class="blob b5" style="opacity:.5"><img class="logo-mark" src="images/logo-nana.jpg" alt="nanà"></div>
+  </div>
+  <div class="container" style="position:relative;z-index:1">
+    <span class="section-tag" style="justify-content:center">Un anello per ogni stato d'animo</span>
+    <h1 data-split>Che colore sei oggi?</h1>
+    <p class="lead" style="margin:20px auto 0">4 domande veloci per scoprire quale smalto nanà rispecchia il tuo umore di oggi.</p>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="container" style="max-width:720px">
+
+    <div class="quiz-card reveal in">
+
+      <div class="quiz-progress"><div class="quiz-progress-bar" id="quiz-progress-bar"></div></div>
+
+      <div class="quiz-question" data-q="0">
+        <h3>1. Come ti senti oggi?</h3>
+        <div class="quiz-options">
+          <button class="quiz-option" data-color="orange">Piena di energia, pronta a tutto</button>
+          <button class="quiz-option" data-color="pink">Al centro dell'attenzione, senza paura</button>
+          <button class="quiz-option" data-color="teal">Rilassata, voglia di leggerezza</button>
+          <button class="quiz-option" data-color="purple">Elegante e un po' misteriosa</button>
+        </div>
+      </div>
+
+      <div class="quiz-question" data-q="1" hidden>
+        <h3>2. Il tuo stile in tre parole?</h3>
+        <div class="quiz-options">
+          <button class="quiz-option" data-color="red">Bold, deciso, energico</button>
+          <button class="quiz-option" data-color="orange">Fresco, giovane, solare</button>
+          <button class="quiz-option" data-color="purple">Delicato, romantico, sognante</button>
+          <button class="quiz-option" data-color="green">Instancabile, vivace, sorprendente</button>
+        </div>
+      </div>
+
+      <div class="quiz-question" data-q="2" hidden>
+        <h3>3. Dove ti immagini in questo momento?</h3>
+        <div class="quiz-options">
+          <button class="quiz-option" data-color="teal">In spiaggia, piedi nudi sulla sabbia</button>
+          <button class="quiz-option" data-color="pink">In città, tra luci e vetrine</button>
+          <button class="quiz-option" data-color="green">In un prato fiorito</button>
+          <button class="quiz-option" data-color="blue">Al mare aperto, orizzonte infinito</button>
+        </div>
+      </div>
+
+      <div class="quiz-question" data-q="3" hidden>
+        <h3>4. Se il tuo umore avesse un colore, oggi sarebbe...</h3>
+        <div class="quiz-options">
+          <button class="quiz-option" data-color="red">Rosso acceso</button>
+          <button class="quiz-option" data-color="blue">Blu profondo</button>
+          <button class="quiz-option" data-color="pink">Fucsia brillante</button>
+          <button class="quiz-option" data-color="orange">Arancio caldo</button>
+        </div>
+      </div>
+
+      <div class="quiz-result" id="quiz-result" hidden>
+        <div class="quiz-result-swatch" id="quiz-result-swatch"></div>
+        <span class="section-tag" style="justify-content:center">Il tuo colore è</span>
+        <h2 id="quiz-result-name">—</h2>
+        <p id="quiz-result-text" style="color:#4a463f;max-width:480px;margin:0 auto 28px"></p>
+        <div class="hero-actions" style="justify-content:center">
+          <a id="quiz-result-wa" href="#" target="_blank" class="btn btn-wa magnetic">Chiedi info su WhatsApp</a>
+          <a id="quiz-result-collection" href="collezione.html" class="btn btn-outline magnetic">Vedi in collezione</a>
+        </div>
+        <button class="quiz-restart" id="quiz-restart">↺ Rifai il quiz</button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo-badge"><img class="logo-mark" src="images/logo-nana.jpg" alt="nanà"></div>
+        <p>Gioielli in argento e smalto, fatti a mano, uno diverso dall'altro. Silver and enamel jewels.</p>
+      </div>
+      <div>
+        <h4>Naviga</h4>
+        <a href="index.html">Home</a>
+        <a href="collezione.html">Collezione</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="chi-siamo.html">Chi siamo</a>
+        <a href="contatti.html">Contatti</a>
+      </div>
+      <div>
+        <h4>Contatti</h4>
+        <a href="https://wa.me/393498881684" target="_blank">WhatsApp: 349 888 1684</a>
+        <a href="https://instagram.com/nanaenjoycolors" target="_blank">Instagram: @nanaenjoycolors</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> nanà enjoy colors — Tutti i diritti riservati</span>
+      <div class="social-row">
+        <a href="https://instagram.com/nanaenjoycolors" target="_blank" aria-label="Instagram">📷</a>
+        <a href="https://wa.me/393498881684" target="_blank" aria-label="WhatsApp">💬</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/393498881684" target="_blank" class="fab-wa" aria-label="Scrivici su WhatsApp">💬</a>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="js/main.js"></script>
+</body>
+</html>
