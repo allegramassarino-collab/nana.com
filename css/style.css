@@ -99,6 +99,9 @@ h1,h2,h3,h4{ font-family:var(--font-logo); font-weight:700; line-height:1.15; }
 .btn-wa:hover{ transform:translateY(-3px) scale(1.03); }
 
 /* ---------- custom cursor (desktop only) ---------- */
+@media (hover:hover){
+  *{ cursor:none !important; }
+}
 .cursor-dot,.cursor-ring{
   position:fixed; top:0; left:0; pointer-events:none; z-index:9999;
   border-radius:50%;
@@ -196,6 +199,7 @@ header.nav.scrolled{
 .hero{
   min-height:100vh; display:flex; align-items:center;
   padding-top:var(--nav-h);
+  padding-bottom:70px;
   overflow:hidden;
 }
 .hero-inner{
