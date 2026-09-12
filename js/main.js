@@ -218,12 +218,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let current = 0;
 
     const results = {
-      orange: { name: 'Arancio', ring: 'Anello Mandarino', text: 'Sei energia pura: hai voglia di brillare e trascinare chi ti sta intorno. Il tuo anello è il Mandarino, smalto arancio acceso per chi non passa mai inosservata.' },
-      red:    { name: 'Rosso', ring: 'Anello Ciliegia', text: 'Sei carattere e decisione. Il tuo colore è il Rosso: l’Anello Ciliegia, intenso e sicuro di sé, esattamente come te.' },
-      pink:   { name: 'Fucsia', ring: 'Anello Fucsia', text: 'Sei IL colore nanà: audace, originale, mai banale. Il tuo anello è il Fucsia, il più iconico della collezione.' },
-      teal:   { name: 'Turchese', ring: 'Anello Turchese', text: 'Sei leggerezza e libertà, ti porti dietro l’estate ovunque tu vada. Il tuo anello è il Turchese.' },
-      green:  { name: 'Verde', ring: 'Anello Lime', text: 'Sei energia naturale, vivace e originale. Il tuo anello è il Lime.' },
-      blue:   { name: 'Blu', ring: 'Anello Oceano', text: 'Sei profondità e calma, con un fondo di mistero. Il tuo anello è l’Oceano.' },
+      orange: { name: 'Arancio', ring: 'Orange Fluo', text: 'Sei energia pura: hai voglia di brillare e trascinare chi ti sta intorno. Il tuo anello è l’Orange Fluo, smalto arancio acceso per chi non passa mai inosservata.' },
+      red:    { name: 'Rosso', ring: 'Caffelatte', text: 'Sei carattere e decisione. Il tuo colore è il Rosso: il Caffelatte, intenso e sicuro di sé, esattamente come te.' },
+      pink:   { name: 'Fucsia', ring: 'Rosa Fluo', text: 'Sei IL colore nanà: audace, originale, mai banale. Il tuo anello è il Rosa Fluo, il più iconico della collezione.' },
+      teal:   { name: 'Turchese', ring: 'Fair Aqua', text: 'Sei leggerezza e libertà, ti porti dietro l’estate ovunque tu vada. Il tuo anello è il Fair Aqua.' },
+      green:  { name: 'Verde', ring: 'Verde Mela', text: 'Sei energia naturale, vivace e originale. Il tuo anello è il Verde Mela.' },
+      blue:   { name: 'Blu', ring: 'Nuvola', text: 'Sei profondità e calma, con un fondo di mistero. Il tuo anello è la Nuvola.' },
       purple: { name: 'Lilla', ring: 'Anello Lilla', text: 'Sei eleganza discreta con un tocco sognante. Il tuo anello è il Lilla.' },
     };
 
