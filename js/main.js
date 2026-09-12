@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else if (item.diamond === 'multi') {
           const row = document.createElement('div');
           row.className = 'stack-diamonds-row';
-          for (let i = 0; i < 3; i++) {
+          for (let i = 0; i < 5; i++) {
             const d = document.createElement('div');
             d.className = 'stack-diamond diamond-small';
             row.appendChild(d);
