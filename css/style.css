@@ -220,25 +220,40 @@ header.nav.scrolled{
 .hero-visual{
   position:relative; height:520px;
 }
+
+/* soft blurred color glows — purely atmospheric, never carry text/logo */
+.glow{
+  position:absolute; border-radius:50%;
+  filter:blur(22px); opacity:.65;
+  animation:float 9s ease-in-out infinite;
+}
+.g1{ width:210px; height:210px; background:var(--teal); bottom:30px; right:0; animation-delay:0s; }
+.g2{ width:170px; height:170px; background:var(--yellow); top:0; left:0; animation-delay:1.5s; }
+.g3{ width:150px; height:150px; background:var(--purple); bottom:0; left:80px; animation-delay:3s; }
+.g4{ width:120px; height:120px; background:var(--red); top:210px; right:140px; animation-delay:2.2s; }
+
+/* crisp circular photo frame */
 .blob{
   position:absolute; border-radius:50%;
   overflow:hidden;
   animation:float 8s ease-in-out infinite;
-  box-shadow:0 20px 40px -12px rgba(23,21,18,.25);
+  box-shadow:0 25px 55px -18px rgba(23,21,18,.35), 0 0 0 8px #fff;
 }
 .blob img{ width:100%; height:100%; object-fit:cover; border-radius:50%; }
-.blob img.logo-mark{ padding:16%; box-sizing:border-box; background:#fff; object-fit:contain; }
-.b1{ width:220px; height:220px; background:var(--orange); top:0; right:40px; animation-delay:0s; }
-.b2{ width:150px; height:150px; background:var(--teal); bottom:60px; right:0; animation-delay:1.2s; }
-.b3{ width:130px; height:130px; background:var(--purple); bottom:0; left:20px; animation-delay:2.4s; }
-.b4{ width:90px; height:90px; background:var(--yellow); top:40px; left:0; animation-delay:.6s; }
-.b5{ width:70px; height:70px; background:var(--red); top:220px; right:160px; animation-delay:1.8s; }
+.b1{ width:270px; height:270px; top:6px; right:10px; animation-delay:0s; }
+
+/* crisp logo badge — always legible, never blurred/cropped */
+.logo-badge{
+  position:absolute; left:0; bottom:26px;
+  background:#fff; border-radius:20px; padding:16px 24px;
+  box-shadow:0 25px 50px -18px rgba(23,21,18,.3);
+  animation:float 7s ease-in-out infinite; animation-delay:.9s;
+}
+.logo-badge img{ height:42px; width:auto; display:block; }
+
 @keyframes float{
   0%,100%{ transform:translateY(0) rotate(0); }
   50%{ transform:translateY(-26px) rotate(6deg); }
-}
-.ring-icon{
-  position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
 }
 
 /* ---------- marquee ---------- */
@@ -407,7 +422,7 @@ footer{
   position:relative; overflow:hidden;
 }
 .page-head h1{ font-size:clamp(2.6rem,6vw,4rem); margin-top:14px; }
-.page-head .blob{ opacity:.85; }
+.page-head .glow{ opacity:.55; }
 
 /* ---------- filters (collezione) ---------- */
 .filters{ display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-bottom:56px; }
