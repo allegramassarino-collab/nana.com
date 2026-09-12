@@ -147,19 +147,35 @@ document.addEventListener('DOMContentLoaded', () => {
     const emptyHint = document.getElementById('stack-empty-hint');
     const sendBtn = document.getElementById('stack-send');
     const colorLabels = { orange:'Arancio', red:'Rosso', pink:'Fucsia', teal:'Turchese', green:'Verde', blue:'Blu', purple:'Lilla' };
+    const diamondLabels = { large:'con diamante grande', small:'con diamante piccolo', none:'senza diamante' };
     const MAX_RINGS = 6;
+    let currentDiamond = 'large';
+
+    const diamondButtons = document.querySelectorAll('.diamond-option');
+    diamondButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        diamondButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentDiamond = btn.dataset.size;
+      });
+    });
 
     const renderStack = () => {
       stackPreview.querySelectorAll('.stack-ring-bar').forEach(el => el.remove());
-      stack.forEach(color => {
+      stack.forEach(item => {
         const bar = document.createElement('div');
-        bar.className = `stack-ring-bar swatch-${color}`;
+        bar.className = `stack-ring-bar swatch-${item.color}`;
+        if (item.diamond !== 'none') {
+          const diamond = document.createElement('div');
+          diamond.className = `stack-diamond diamond-${item.diamond}`;
+          bar.appendChild(diamond);
+        }
         stackPreview.appendChild(bar);
       });
       emptyHint.hidden = stack.length > 0;
       if (stack.length > 0) {
-        const labels = stack.map(c => colorLabels[c]).join(', ');
-        const text = encodeURIComponent(`Ciao nanà! Mi piacerebbe uno stack con questi colori: ${labels} 💕`);
+        const labels = stack.map(item => `${colorLabels[item.color]} (${diamondLabels[item.diamond]})`).join(', ');
+        const text = encodeURIComponent(`Ciao nanà! Mi piacerebbe uno stack con: ${labels} 💕`);
         sendBtn.href = `https://wa.me/393498881684?text=${text}`;
         sendBtn.style.pointerEvents = 'auto';
         sendBtn.style.opacity = '1';
@@ -173,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.stack-swatch').forEach(btn => {
       btn.addEventListener('click', () => {
         if (stack.length >= MAX_RINGS) return;
-        stack.push(btn.dataset.color);
+        stack.push({ color: btn.dataset.color, diamond: currentDiamond });
         renderStack();
       });
     });
