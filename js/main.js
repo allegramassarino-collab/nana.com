@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const emptyHint = document.getElementById('stack-empty-hint');
     const sendBtn = document.getElementById('stack-send');
     const colorLabels = { orange:'Arancio', red:'Rosso', pink:'Fucsia', teal:'Turchese', green:'Verde', blue:'Blu', purple:'Lilla' };
-    const diamondLabels = { large:'con diamante grande', small:'con diamante piccolo', none:'senza diamante' };
+    const diamondLabels = { large:'con diamante grande', small:'con diamante piccolo', multi:'con più diamanti piccoli', none:'senza diamante' };
     const MAX_RINGS = 6;
     let currentDiamond = 'large';
 
@@ -165,10 +165,19 @@ document.addEventListener('DOMContentLoaded', () => {
       stack.forEach(item => {
         const bar = document.createElement('div');
         bar.className = `stack-ring-bar swatch-${item.color}`;
-        if (item.diamond !== 'none') {
+        if (item.diamond === 'large' || item.diamond === 'small') {
           const diamond = document.createElement('div');
           diamond.className = `stack-diamond diamond-${item.diamond}`;
           bar.appendChild(diamond);
+        } else if (item.diamond === 'multi') {
+          const row = document.createElement('div');
+          row.className = 'stack-diamonds-row';
+          for (let i = 0; i < 3; i++) {
+            const d = document.createElement('div');
+            d.className = 'stack-diamond diamond-small';
+            row.appendChild(d);
+          }
+          bar.appendChild(row);
         }
         stackPreview.appendChild(bar);
       });
